@@ -349,7 +349,7 @@ h2 {
 }
 
 .about-section {
-  background: #f9f6ec;
+  background: #ffffff;
   padding: 50px 0;
   text-align: center;
   position: relative;
@@ -587,7 +587,7 @@ footer {
   max-width: 750px;
   margin: 50px auto;
   padding: 20px;
-  background: #f8f5ee;
+  background: #ffffff;
   border-radius: 8px;
 }
 
@@ -615,6 +615,7 @@ footer {
   font-weight: bold;
   text-align: center;
   color: #000000;
+  font-family: "NewYork", serif;
 }
 
 .blog-meta {
@@ -634,7 +635,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  background: #f8f5ee;
+  background: #ffffff;
   padding: 20px;
   margin: 40px auto;
   max-width: 750px;
@@ -666,7 +667,7 @@ footer {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  font-family: "NewYork", serif;
+  font-family: "Futura_Book-Normal", sans-serif;
 }
 .shop-button:hover {
   background-color: #ffffff;
@@ -676,12 +677,13 @@ footer {
   max-width: 750px;
   margin: 40px auto;
   padding: 20px;
-  background: #f8f5ee;
+  background: #ffffff;
   border-radius: 8px;
 }
 
 .news-title {
   text-align: center;
+  font-family: "NewYork", serif;
 }
 
 .news-item {
@@ -706,6 +708,7 @@ footer {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  font-family: "NewYork", serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -806,9 +809,6 @@ footer {
   .newsletter-input button {
     width: 20%;
     text-align: center;
-  }
-  .social-icons {
-    justify-content: flex-start;
   }
   .footer-links {
     flex-direction: column;

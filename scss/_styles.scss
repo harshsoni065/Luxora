@@ -313,7 +313,7 @@ h2 {
 	display: none !important;
 }
 .about-section {
-	background: #f9f6ec;
+	background: $background-color;
 	padding: 50px 0;
 	text-align: center;
 	position: relative;
@@ -540,7 +540,7 @@ footer {
 	max-width: 750px;
 	margin: 50px auto;
 	padding: 20px;
-	background: #f8f5ee;
+	background: $background-color;
 	border-radius: 8px;
 }
 .blog-content {
@@ -566,6 +566,7 @@ footer {
 	font-weight: bold;
 	text-align: center;
 	color: $color;
+	font-family: $font-secondary;
 }
 .blog-meta {
 	font-size: 14px;
@@ -584,7 +585,7 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
-	background: #f8f5ee;
+	background: $background-color;
 	padding: 20px;
 	margin: 40px auto;
 	max-width: 750px;
@@ -612,7 +613,7 @@ footer {
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
-	font-family: $font-secondary;
+	font-family: $font-primary;
 	&:hover {
 		background-color: $background-color;
 	}
@@ -621,11 +622,12 @@ footer {
 	max-width: 750px;
 	margin: 40px auto;
 	padding: 20px;
-	background: #f8f5ee;
+	background: $background-color;
 	border-radius: 8px;
 }
 .news-title {
 	text-align: center;
+	font-family: $font-secondary;
 }
 .news-item {
 	display: flex;
@@ -648,6 +650,7 @@ footer {
 		text-decoration: none;
 		color: $color;
 		font-weight: bold;
+		font-family: $font-secondary;
 	}
 }
 @media screen and (max-width: 768px) {
@@ -750,9 +753,6 @@ footer {
 			width: 20%;
 			text-align: center;
 		}
-	}
-	.social-icons {
-		justify-content: flex-start;
 	}
 	.footer-links {
 		flex-direction: column;
