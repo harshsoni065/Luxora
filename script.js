@@ -77,19 +77,4 @@ window.addEventListener("scroll", function () {
             enableScroll(); // Restore scroll position
         });
     });
-
-
-
-    
-    
-  
-
-    
-    
-    
-    
-    
-    
-    
-    
     

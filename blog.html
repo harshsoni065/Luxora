@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Luxora</title>
         <link rel="stylesheet" href="styles1.css">
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        
     </head>
     <body>
     
@@ -63,22 +64,22 @@
             </div>
         </header>
 <body>
-    <div class="blog-container">
-        <h1 class="blog-title">The Power of Pink: Celebrity Style Inspo from Our Favorite Icons</h1>
-        <p class="blog-meta">By Jane Doe | Published: Apr 25, 2024 2:19 PM EDT</p>
+    <div class="blog-container fade-in">
+        <h1 class="blog-title fade-in">The Power of Pink: Celebrity Style Inspo from Our Favorite Icons</h1>
+        <p class="blog-meta fade-in">By Jane Doe | Published: Apr 25, 2024 2:19 PM EDT</p>
 
         <!-- Social Icons -->
-        <div class="social-icons">
+        <div class="social-icons fade-in">
             <a href="#"><img src="Images/insta.svg" alt="Instagram" height="26px" width="26px"></a>
             <a href="#"><img src="Images/fb.svg" alt="Facebook" height="26px" width="26px"></a>
             <a href="#"><img src="Images/x.svg" alt="Twitter" height="26px" width="26px"></a>
         </div>
 
-        <div class="blog-image">
+        <div class="blog-image fade-in">
             <img src="Images/blog.png" alt="Celebrity in pink outfit">
         </div>
 
-        <div class="blog-content">
+        <div class="blog-content fade-in">
             <p>When it comes to making bold fashion statements, there’s one color that never fails to turn heads: pink. From soft pastels to vibrant fuchsias, pink has been making waves on red carpets, streets, and Instagram feeds worldwide. This week, we’re shining the light on how iconic celebrities are nailing this standout color.</p>
 
             <h2>Paris Hilton’s Double Pink Moment</h2>
@@ -101,10 +102,10 @@
     </div>
 
     <!-- Main Section -->
-    <div class="feature-section">
+    <div class="feature-section fade-in">
         <img src="Images/blog2.jpg" alt="Woman in pink outfit" class="feature-image">
         
-        <div class="feature-content">
+        <div class="feature-content fade-in">
             <h2 class="feature-title">Why Pink Is Here to Stay</h2>
             <p>Pink isn’t just a color—it’s a mood, a statement, and a celebration of individuality. Whether you’re channeling bold monochrome or layering subtle hues, it makes a bold yet feminine mark. This timeless trend continues to embrace an understated palette of soft wallpapers, pink satins, or timeless classics.</p>
             
@@ -121,10 +122,10 @@
     <hr style="width:90%;">
 
     <!-- Latest News Section -->
-    <div class="latest-news">
+    <div class="latest-news fade-in">
         <h2 class="news-title">Latest News</h2>
 
-        <div class="news-item">
+        <div class="news-item fade-in">
             <img src="Images/news1.png" alt="Fashion news" class="news-thumbnail">
             <div class="news-content">
                 <p class="news-date">January 25, 2025</p>
@@ -132,7 +133,7 @@
             </div>
         </div>
         <hr>
-        <div class="news-item">
+        <div class="news-item fade-in">
             <img src="Images/news2.png" alt="Fashion news" class="news-thumbnail">
             <div class="news-content">
                 <p class="news-date">January 25, 2025</p>
@@ -140,7 +141,7 @@
             </div>
         </div>
         <hr>
-        <div class="news-item">
+        <div class="news-item fade-in">
             <img src="Images/news3.png" alt="Fashion news" class="news-thumbnail">
             <div class="news-content">
                 <p class="news-date">January 25, 2025</p>
@@ -191,3 +192,30 @@
     </footer> 
 </body>
 </html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(".fade-in");
+    
+        if (fadeElements.length === 0) {
+            console.warn("No elements with .fade-in found! Check your HTML.");
+            return;
+        }
+    
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                rootMargin: "0px 0px -50px 0px",
+                threshold: 0.2,
+            }
+        );
+    
+        fadeElements.forEach((el) => observer.observe(el));
+    });
+</script>
