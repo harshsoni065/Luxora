@@ -593,14 +593,14 @@ footer {
     transform: translateY(0);
   }
 }
-.fade-in, .blog-container, .feature-section, .latest-news, .news-item {
+.fade-in, .blog-image, .blog-content, .feature-section, .latest-news, .news-item {
   opacity: 0;
   visibility: hidden;
   transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.fade-in.visible, .visible.blog-container, .visible.feature-section, .visible.latest-news, .visible.news-item {
+.fade-in.visible, .visible.blog-image, .visible.blog-content, .visible.feature-section, .visible.latest-news, .visible.news-item {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

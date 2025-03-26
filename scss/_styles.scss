@@ -551,7 +551,7 @@ footer {
     opacity: 0;
     visibility: hidden;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .fade-in.visible {
@@ -561,7 +561,7 @@ footer {
 }
 
 
-.blog-container, .feature-section, .latest-news, .news-item {
+.blog-image, .blog-content, .feature-section, .latest-news, .news-item {
     @extend .fade-in;
 }
 
