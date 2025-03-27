@@ -77,30 +77,9 @@ window.addEventListener("scroll", function () {
             enableScroll(); // Restore scroll position
         });
     });
-    console.log("script.js is connected!");
-    
-    document.addEventListener("DOMContentLoaded", function () {
-        const fadeElements = document.querySelectorAll(".fade-in");
-    
-        if (fadeElements.length === 0) {
-            console.warn("No elements with .fade-in found! Check your HTML.");
-            return;
-        }
-    
-        const observer = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                rootMargin: "0px 0px -50px 0px",
-                threshold: 0.2,
-            }
-        );
-    
-        fadeElements.forEach((el) => observer.observe(el));
+
+    document.addEventListener("scroll", function () {
+        let scrollPosition = window.scrollY;
+        document.querySelector(".parallax-bg").style.transform = `translateY(${scrollPosition * 0.5}px)`;
     });
+    
